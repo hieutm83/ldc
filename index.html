@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Camera Installation</title>
+  <script src="https://cdn.tailwindcss.com"></script> <!-- Liên kết TailwindCSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> <!-- Font Awesome -->
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .logo {
+      border-radius: 50%;
+    }
+
+    .bg-white {
+      background-color: #ffffff;
+    }
+
+    .shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover effects for main items and links */
+    .main-item, .item-link {
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      background-color: #ffffff; /* Nền trắng mặc định */
+      color: #092f64; /* Chữ xanh mặc định */
+    }
+
+    .main-item:hover, .item-link:hover {
+      transform: scale(1.05);
+      background-color: #1E90FF; /* Màu nền xanh khi hover */
+      color: #ffffff; /* Màu chữ trắng khi hover */
+    }
+
+    .main-item span, .item-link span {
+      color: inherit; /* Đảm bảo rằng màu chữ được kế thừa từ cha */
+    }
+  </style>
+</head>
+<body class="bg-[#cef3fa] flex justify-center items-center min-h-screen">
+  <div class="w-full max-w-md p-4">
+    <div class="flex justify-center mb-4">
+      <img alt="Company logo" class="rounded-full" height="80" src="https://i.imgur.com/U4A761w.png" width="80" />
+    </div>
+    <h1 class="text-center text-lg font-bold mb-2 text-[#092f64]">LẮP ĐẶT CAMERA HÀ NỘI</h1>
+    <p class="text-center text-gray-600 mb-4 text-sm">Video hướng dẫn sử dụng camera Imou, Ezviz</p>
+    <div class="space-y-3">
+      <div id="item-ezviz" class="main-item flex items-center justify-between bg-white p-3 rounded-full shadow w-full cursor-pointer" onclick="toggleSubdirectory('subdirectory-ezviz', 'item-ezviz')">
+        <img alt="Ezviz logo" class="w-8 h-8 logo" src="https://i.imgur.com/Yh3fEck.png" />
+        <span class="font-medium text-center flex-grow text-sm">HƯỚNG DẪN SỬ DỤNG CAMERA EZVIZ</span>
+        <i class="fas fa-ellipsis-v text-gray-400"></i>
+      </div>
+      <div id="subdirectory-ezviz" class="hidden ml-4 space-y-2">
+        <div class="bg-white p-2 rounded-lg shadow flex justify-center">
+          <p class="text-gray-700 text-sm">Anh chọn các mục hướng dẫn dưới đây</p>
+        </div>
+        <div class="mt-2">
+          <a href="https://youtube.com/shorts/ylXKuaNgAqg?si=yNUsywdqHpVRL9LH" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Kết nối camera Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/zdh3S2F3NwU" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Chia sẻ camera Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/Kna9DFlvqtE?si=tPabYnNR_pqCQW01" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Lắp chân đế camera Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtu.be/fmfgEjX7JV0?si=13ADIF3d752zFnnp" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Khắc phục ngoại tuyến Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/xqT_V9-Ixrk?si=LtQWlVYpUXQIVH-7" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Theo dõi chuyển động Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+        <div class="bg-white p-2 rounded-lg shadow flex justify-center">
+          <p class="text-gray-700 text-sm">Sau khi kết nối thành công, anh chọn các mục hướng dẫn dưới đây</p>
+        </div>
+        <div class="mt-2">
+          <a href="https://youtu.be/HYRPfqLRjiw?si=iKLuKoj3NbNzRqh-" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Cài đặt lưu trữ liên tục</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtu.be/6_kl1lhJoLo?si=Crr0FMpsp0FCCznG" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Cài đặt giờ trên camera Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtu.be/y9V2ae0x-Dk?si=MvqlW99Bz77n0AvJ" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Tải video về điện thoại</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/bmIeLW0DYBU?si=O-OR3vR4KLu8CW0W" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Lật hình camera Ezviz</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+      <div id="item-imou" class="main-item flex items-center justify-between bg-white p-3 rounded-full shadow w-full cursor-pointer" onclick="toggleSubdirectory('subdirectory-imou', 'item-imou')">
+        <img alt="Imou logo" class="w-8 h-8 logo" src="https://i.imgur.com/HCYoOg7.png" />
+        <span class="font-medium text-center flex-grow text-sm">HƯỚNG DẪN SỬ DỤNG CAMERA IMOU</span>
+        <i class="fas fa-ellipsis-v text-gray-400"></i>
+      </div>
+      <div id="subdirectory-imou" class="hidden ml-4 space-y-2">
+        <div class="bg-white p-2 rounded-lg shadow flex justify-center">
+          <p class="text-gray-700 text-sm">Anh chọn các mục hướng dẫn dưới đây</p>
+        </div>
+        <div class="mt-2">
+          <a href="https://youtu.be/OEgwR_1VMU8?si=gXBH6WYROIRIGQpR" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Kết nối camera Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/rA017GRmuxA?si=okSmEPNNzjRsTohE" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Chia sẻ camera Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/Kna9DFlvqtE?si=tPabYnNR_pqCQW01" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Lắp chân đế Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtu.be/5SMqeeK9lcY?si=H0g7CIXF5tP0nlVa" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Khắc phục ngoại tuyến Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtu.be/100kQuLwKGs?si=mYeLjOD9fqwinUGe" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Theo dõi chuyển động Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+        <div class="bg-white p-2 rounded-lg shadow flex justify-center">
+          <p class="text-gray-700 text-sm">Sau khi kết nối thành công, anh chọn các mục hướng dẫn dưới đây</p>
+        </div>
+        <div class="mt-2">
+          <a href="https://youtube.com/shorts/V7ErqNuxlC4?si=-To3COSgg6YBSkLY" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Cài đặt lưu trữ liên tục</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/McgqROz6ZhM?si=CjfR765tJH3HmvCG" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Cài đặt giờ trên camera Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtube.com/shorts/HbfGxd2u0QE?si=WiS3ogOcC7XuYfCl" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Tải video về điện thoại</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="https://youtu.be/F3eWiSQMiT8?si=TJYtkJJqx7xQtHzd" target="_blank" class="item-link flex justify-between items-center bg-white p-2 rounded-lg mb-2">
+            <span class="text-xs">Lật hình camera Imou</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+      <div id="item-usage" class="main-item flex items-center justify-between bg-white p-3 rounded-full shadow w-full cursor-pointer" onclick="toggleSubdirectory('subdirectory-usage', 'item-usage')">
+        <img alt="Usage guide logo" class="w-8 h-8 logo" src="https://i.imgur.com/U4A761w.png" />
+        <span class="font-medium text-center flex-grow text-sm">THÔNG TIN BẢO HÀNH</span>
+        <i class="fas fa-ellipsis-v text-gray-400"></i>
+      </div>
+      <div id="subdirectory-usage" class="hidden ml-4 space-y-4">
+<div class="bg-white p-2 rounded-lg shadow">
+  <p class="text-gray-700 text-sm spacing-bottom">Nếu quý khách cần bảo hành vui lòng gửi về địa chỉ</p>
+  <p class="text-gray-700 text-sm">Số 76 Lô D5 KĐT Đại Kim, Hoàng Mai, Hà Nội</p>
+   <p class="text-gray-700 text-sm spacing-bottom">ngân hàng An Bình đi vào 200m</p>
+  <p class="text-gray-700 text-sm spacing-bottom">Hoặc hỏi đường vào trường tiểu học đại từ</p>
+  <p class="text-gray-700 text-sm">LH: Lắp đặt camera Hà Nội - 0982970333</p>
+</div>
+        <div class="bg-white p-2 rounded-lg shadow">
+  <p class="text-gray-700 text-sm spacing-bottom">Ghi rõ nội dung cam lỗi (ví dụ: cam lỗi đèn đỏ không reset được,...)</p>
+  <p class="text-gray-700 text-sm">NOTE RÕ ĐỊA CHỈ + SỐ ĐIỆN THOẠI ĐỂ SHOP TIỆN GỬI LẠI HÀNG CHO QUÝ KHÁCH.👍</p>
+</div>
+      </div>
+<div id="item-tech" class="main-item flex items-center justify-between bg-white p-3 rounded-full shadow w-full cursor-pointer" onclick="window.location.href='https://zalo.me/g/alqtef699'">
+  <img alt="Technical guide group logo" class="w-8 h-8 logo" src="https://i.imgur.com/Yl8xdB4.png" />
+  <span class="font-medium text-center flex-grow text-sm">NHÓM HƯỚNG DẪN KĨ THUẬT</span>
+  <i class="fas fa-ellipsis-v text-gray-400"></i>
+</div>
+<div class="mt-6">
+  <img alt="Warranty policy image" class="w-full rounded-lg shadow" src="https://i.imgur.com/snVIe3x.jpeg" />
+</div>
+
+  <script>
+    function toggleSubdirectory(subdirectoryId, itemId) {
+      const subdirectory = document.getElementById(subdirectoryId);
+      const item = document.getElementById(itemId);
+      if (subdirectory.classList.contains('hidden')) {
+        subdirectory.classList.remove('hidden');
+        item.classList.add('active');
+      } else {
+        subdirectory.classList.add('hidden');
+        item.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add the spacing between sections */
+.space-y-2 > * {
+  margin-bottom: 0.5rem;
+}
+
+.space-y-4 > * {
+  margin-bottom: 1rem;
+}
+
+/* Custom spacing for paragraphs */
+.spacing-bottom {
+  margin-bottom: 1rem; /* Khoảng cách giữa các đoạn văn */
+}
+
+/* Hover effects for main items and links */
+.main-item, .item-link {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff; /* Nền trắng mặc định */
+  color: #092f64; /* Chữ xanh mặc định */
+}
+
+.main-item:hover, .item-link:hover {
+  transform: scale(1.05);
+  background-color: #1E90FF; /* Màu nền xanh khi hover */
+  color: #ffffff !important; /* Màu chữ trắng khi hover */
+}
+
+.main-item span, .item-link span {
+  color: inherit; /* Đảm bảo rằng màu chữ được thừa kế từ cha */
+}
+
+.main-item:hover span, .item-link:hover span {
+  color: #ffffff; /* Đảm bảo rằng màu chữ chuyển thành trắng khi hover */
+}
