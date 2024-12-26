@@ -41,9 +41,14 @@ body {
 
 /* Hover effects for main items and links */
 .main-item, .item-link {
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 12px; /* Đồng bộ padding */
+  border-radius: 9999px; /* Đồng bộ bo tròn */
+  font-size: 16px; /* Đồng bộ kích thước chữ */
+  font-weight: medium; /* Đồng bộ độ đậm chữ */
   background-color: #ffffff; /* Nền trắng mặc định */
   color: #092f64; /* Chữ xanh mặc định */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng giống nhau */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển tiếp */
 }
 
 .main-item:hover, .item-link:hover {
