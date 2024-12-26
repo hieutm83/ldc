@@ -1,3 +1,4 @@
+// Hàm toggleSubdirectory cho việc mở/đóng các danh mục con
 function toggleSubdirectory(subdirectoryId, itemId) {
   // Lấy subdirectory và item tương ứng
   const subdirectory = document.getElementById(subdirectoryId);
@@ -17,3 +18,21 @@ function toggleSubdirectory(subdirectoryId, itemId) {
     }
   }
 }
+
+// Hiệu ứng rơi cánh hoa Tết
+function createFlower() {
+  const flower = document.createElement('div');
+  flower.classList.add('flower');
+  flower.style.left = `${Math.random() * 100}vw`; // Vị trí ngang ngẫu nhiên
+  flower.style.animationDuration = `${Math.random() * 3 + 2}s`; // Tốc độ rơi ngẫu nhiên
+  flower.style.animationDelay = `${Math.random() * 5}s`; // Delay ngẫu nhiên
+  document.getElementById('falling-flowers').appendChild(flower);
+
+  // Xóa cánh hoa sau khi rơi xong
+  setTimeout(() => {
+    flower.remove();
+  }, 5000);
+}
+
+// Kích hoạt hiệu ứng cánh hoa
+setInterval(createFlower, 300);
