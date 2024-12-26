@@ -5,13 +5,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-image: url('https://i.imgur.com/rwumQ4w.png'); /* URL hình nền cho điện thoại */
+  background-image: url('https://i.imgur.com/VBRoP6M.png'); /* URL hình nền cho điện thoại */
 }
 
 /* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
 @media (min-width: 768px) {
   body {
-    background-image: url('https://i.imgur.com/C0rUVm7.png'); /* URL hình nền cho máy tính */
+    background-image: url('https://i.imgur.com/V7w4mwB.png'); /* URL hình nền cho máy tính */
   }
 }
 
