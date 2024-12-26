@@ -1,6 +1,11 @@
 /* Base Styles */
 body {
   font-family: 'Arial', sans-serif;
+  background-image: url('https://example.com/your-background-image.jpg'); /* Thay bằng URL hình nền của bạn */
+  background-size: auto; /* Giữ nguyên kích thước ảnh nền */
+  background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+  background-position: center; /* Căn giữa ảnh nền */
+  background-attachment: fixed; /* Giữ cố định ảnh nền khi cuộn trang */
 }
 
 .hidden {
