@@ -31,6 +31,8 @@ html, body {
 
 /* Logo hình tròn và bóng viền */
 .logo {
+  width: 40px; /* Đặt kích thước cố định cho logo */
+  height: 40px; /* Đặt chiều cao bằng chiều rộng để có hình tròn */
   border-radius: 50%; /* Đảm bảo logo là hình tròn */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng viền cho logo */
   object-fit: cover; /* Đảm bảo ảnh trong logo không bị biến dạng */
