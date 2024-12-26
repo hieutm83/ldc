@@ -14,12 +14,14 @@ html, body {
 /* Hình nền mặc định cho điện thoại */
 body {
   background-image: url('https://i.imgur.com/VBRoP6M.png');
+  background-size: 100% auto; /* Chỉ điều chỉnh chiều rộng, chiều cao tự động */
 }
 
 /* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
 @media (min-width: 768px) {
   body {
     background-image: url('https://i.imgur.com/V7w4mwB.png');
+    background-size: cover; /* Hiển thị đầy đủ cho thiết bị lớn */
   }
 }
 
@@ -98,4 +100,14 @@ body {
   margin: 0 auto;
   padding: 16px;
   box-sizing: border-box; /* Tính cả padding trong kích thước */
+}
+
+/* Chỉnh sửa riêng cho thiết bị nhỏ (điện thoại) */
+@media (max-width: 767px) {
+  body {
+    background-size: 100% auto; /* Chỉnh tỷ lệ hình nền trên điện thoại */
+  }
+  .content {
+    padding: 12px; /* Giảm khoảng cách để tối ưu cho màn hình nhỏ */
+  }
 }
