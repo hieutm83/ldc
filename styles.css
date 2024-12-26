@@ -28,6 +28,10 @@ html, body {
     background-image: url('https://i.imgur.com/bVbTvVT.png'); /* Hình nền máy tính */
   }
 }
+.logo {
+    border-radius: 50%; /* Đảm bảo logo là hình tròn */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng viền cho logo */
+}
 
 /* Nội dung */
 .content {
