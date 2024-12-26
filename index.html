@@ -104,6 +104,10 @@
         <span class="font-medium text-center flex-grow text-sm">HƯỚNG DẪN SỬ DỤNG CAMERA EZVIZ</span>
         <i class="fas fa-ellipsis-v text-gray-400"></i>
       </div>
+      <!-- Button để kích hoạt việc di chuyển -->
+      <button id="moveBtn">Di chuyển lên đầu</button>
+
+      <!-- Phần tử cần di chuyển -->
       <div id="subdirectory-ezviz" class="hidden ml-4 space-y-2">
         <div class="bg-white p-2 rounded-lg shadow flex justify-center">
           <p class="text-gray-700 text-sm">Anh chọn các mục hướng dẫn dưới đây</p>
@@ -157,6 +161,10 @@
         <span class="font-medium text-center flex-grow text-sm">HƯỚNG DẪN SỬ DỤNG CAMERA IMOU</span>
         <i class="fas fa-ellipsis-v text-gray-400"></i>
       </div>
+      <!-- Button để kích hoạt việc di chuyển -->
+      <button id="moveBtn">Di chuyển lên đầu</button>
+
+      <!-- Phần tử cần di chuyển -->
       <div id="subdirectory-imou" class="hidden ml-4 space-y-2">
         <div class="bg-white p-2 rounded-lg shadow flex justify-center">
           <p class="text-gray-700 text-sm">Anh chọn các mục hướng dẫn dưới đây</p>
@@ -233,26 +241,29 @@
   <img alt="Warranty policy image" class="w-full rounded-lg shadow" src="https://i.imgur.com/LVoaoHZ.png" />
 </div>
 
-  <script>
-    function toggleSubdirectory(subdirectoryId, itemId) {
-      // Lấy subdirectory và item tương ứng
-      const subdirectory = document.getElementById(subdirectoryId);
-      const item = document.getElementById(itemId);
+<script>
+  function toggleSubdirectory(subdirectoryId, itemId) {
+    // Lấy subdirectory và item tương ứng
+    const subdirectory = document.getElementById(subdirectoryId);
+    const item = document.getElementById(itemId);
 
-      if (subdirectory) {
-        const isHidden = subdirectory.classList.contains('hidden');
+    if (subdirectory) {
+      const isHidden = subdirectory.classList.contains('hidden');
 
-        // Luôn ẩn tất cả các subdirectory và loại bỏ class 'active' trên các item
-        document.querySelectorAll('[id^="subdirectory"]').forEach((sub) => sub.classList.add('hidden'));
-        document.querySelectorAll('[id^="item"]').forEach((itm) => itm.classList.remove('active'));
+      // Luôn ẩn tất cả các subdirectory và loại bỏ class 'active' trên các item
+      document.querySelectorAll('[id^="subdirectory"]').forEach((sub) => sub.classList.add('hidden'));
+      document.querySelectorAll('[id^="item"]').forEach((itm) => itm.classList.remove('active'));
 
-        // Nếu subdirectory đang ẩn, hiển thị nó và thêm class 'active' vào item tương ứng
-        if (isHidden) {
-          subdirectory.classList.remove('hidden');
-          item.classList.add('active');
-        }
+      // Nếu subdirectory đang ẩn, hiển thị nó và thêm class 'active' vào item tương ứng
+      if (isHidden) {
+        subdirectory.classList.remove('hidden');
+        item.classList.add('active');
+        
+        // Di chuyển phần tử lên đầu trang
+        document.body.prepend(subdirectory); // Đưa subdirectory lên đầu trang
       }
     }
-  </script>
+  }
+</script>
 </body>
 </html>
