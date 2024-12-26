@@ -1,11 +1,13 @@
 /* Base Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-size: contain;
+  background-size: cover; /* Giữ tỷ lệ của hình nền */
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-image: url('https://i.imgur.com/VBRoP6M.png'); /* URL hình nền cho điện thoại */
+  overflow-x: hidden; /* Tránh cuộn ngang nếu nội dung mở rộng */
+  height: 100%; /* Giữ chiều cao toàn màn hình */
 }
 
 /* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
@@ -15,6 +17,7 @@ body {
   }
 }
 
+/* Đảm bảo các thư mục con không làm thay đổi layout */
 .hidden {
   max-height: 0;
   overflow: hidden;
@@ -22,9 +25,11 @@ body {
 }
 
 .hidden.open {
-  max-height: 500px;
+  max-height: 500px; /* Hoặc giá trị phù hợp */
+  overflow: auto; /* Cho phép cuộn nếu nội dung vượt quá chiều cao */
 }
 
+/* Các lớp CSS khác */
 .logo {
   border-radius: 50%;
 }
@@ -37,7 +42,6 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Thêm khoảng cách giữa các phần */
 .space-y-2 > * {
   margin-bottom: 0.5rem;
 }
@@ -46,12 +50,10 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Khoảng cách tùy chỉnh cho đoạn văn */
 .spacing-bottom {
   margin-bottom: 1rem;
 }
 
-/* Hiệu ứng hover cho các mục chính và liên kết */
 .main-item, .item-link {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   background-color: #ffffff;
