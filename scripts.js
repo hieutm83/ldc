@@ -20,6 +20,9 @@ function toggleSubdirectory(subdirectoryId, itemId) {
       if (item) {
         item.classList.add('active');
       }
+      
+    // Cuộn đến item vừa bấm
+    item.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
