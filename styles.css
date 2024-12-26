@@ -3,18 +3,17 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100%; /* Đảm bảo nội dung luôn đủ cao */
+  height: 100%; /* Đảm bảo nội dung chiếm toàn bộ chiều cao */
   font-family: 'Arial', sans-serif;
-  background-size: cover; /* Giữ tỷ lệ hình nền */
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* Hình nền cố định khi cuộn */
+  background-attachment: scroll; /* Đổi từ fixed sang scroll để tương thích iOS */
 }
 
 /* Hình nền mặc định cho điện thoại */
 body {
   background-image: url('https://i.imgur.com/VBRoP6M.png');
-  background-size: 100% auto; /* Chỉ điều chỉnh chiều rộng, chiều cao tự động */
+  background-size: 100% auto; /* Tự động điều chỉnh chiều cao theo chiều rộng */
 }
 
 /* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
@@ -22,7 +21,17 @@ body {
   body {
     background-image: url('https://i.imgur.com/V7w4mwB.png');
     background-size: cover; /* Hiển thị đầy đủ cho thiết bị lớn */
+    background-attachment: fixed; /* Fixed chỉ áp dụng trên máy tính */
   }
+}
+
+/* Nội dung chính */
+.content {
+  width: 100%;
+  max-width: 768px; /* Giới hạn chiều rộng */
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 /* Ẩn nội dung khi không mở */
@@ -32,7 +41,6 @@ body {
   transition: max-height 0.3s ease;
 }
 
-/* Khi mở nội dung */
 .hidden.open {
   max-height: 500px; /* Tùy chỉnh độ cao tối đa */
 }
@@ -49,42 +57,27 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Thêm khoảng cách giữa các phần */
-.space-y-2 > * {
-  margin-bottom: 0.5rem;
-}
-
-.space-y-4 > * {
-  margin-bottom: 1rem;
-}
-
-/* Khoảng cách tùy chỉnh cho đoạn văn */
-.spacing-bottom {
-  margin-bottom: 1rem;
-}
-
-/* Hiệu ứng hover cho các mục chính và liên kết */
+/* Hover effects for main items and links */
 .main-item, .item-link {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  background-color: #ffffff; /* Nền trắng mặc định */
-  color: #092f64; /* Chữ xanh mặc định */
+  background-color: #ffffff;
+  color: #092f64;
 }
 
 .main-item:hover, .item-link:hover {
   transform: scale(1.05);
-  background-color: #1E90FF; /* Màu nền xanh khi hover */
-  color: #ffffff; /* Màu chữ trắng khi hover */
+  background-color: #1E90FF;
+  color: #ffffff;
 }
 
 .main-item span, .item-link span {
-  color: inherit; /* Kế thừa màu chữ */
+  color: inherit;
 }
 
 .main-item:hover span, .item-link:hover span {
   color: #ffffff;
 }
 
-/* Hiệu ứng cho mũi tên */
 .main-item .arrow {
   transition: transform 0.3s ease;
 }
@@ -93,21 +86,13 @@ body {
   transform: rotate(180deg);
 }
 
-/* Định dạng nội dung chính để giữ bố cục đẹp */
-.content {
-  width: 100%;
-  max-width: 768px; /* Giới hạn chiều rộng */
-  margin: 0 auto;
-  padding: 16px;
-  box-sizing: border-box; /* Tính cả padding trong kích thước */
-}
-
 /* Chỉnh sửa riêng cho thiết bị nhỏ (điện thoại) */
 @media (max-width: 767px) {
   body {
-    background-size: 100% auto; /* Chỉnh tỷ lệ hình nền trên điện thoại */
+    background-size: contain; /* Thay đổi từ 100% auto thành contain để giữ tỷ lệ */
+    background-attachment: scroll; /* Đảm bảo cuộn trên iOS */
   }
   .content {
-    padding: 12px; /* Giảm khoảng cách để tối ưu cho màn hình nhỏ */
+    padding: 12px;
   }
 }
