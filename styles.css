@@ -77,3 +77,14 @@ html, body {
     padding: 12px;
   }
 }
+
+/* Tăng chiều cao tối thiểu cho các phần tử khi cuộn */
+.item-link, .main-item {
+  min-height: 50px;
+}
+
+/* Đảm bảo các phần tử có chiều cao đủ để cuộn */
+#subdirectory-ezviz {
+  max-height: none;
+  overflow: visible;
+}
