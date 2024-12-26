@@ -59,3 +59,12 @@ body {
 .main-item:hover span, .item-link:hover span {
   color: #ffffff; /* Đảm bảo rằng màu chữ chuyển thành trắng khi hover */
 }
+
+.main-item .arrow {
+  transition: transform 0.3s ease;
+}
+
+.main-item.active .arrow {
+  transform: rotate(180deg); /* Xoay lên khi mở */
+}
+
