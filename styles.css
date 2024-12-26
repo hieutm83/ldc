@@ -40,29 +40,40 @@ body {
 }
 
 /* Hover effects for main items and links */
-.main-item, .item-link {
-  padding: 12px; /* Đồng bộ padding */
-  border-radius: 9999px; /* Đồng bộ bo tròn */
-  font-size: 16px; /* Đồng bộ kích thước chữ */
-  font-weight: medium; /* Đồng bộ độ đậm chữ */
-  background-color: #ffffff; /* Nền trắng mặc định */
-  color: #092f64; /* Chữ xanh mặc định */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng giống nhau */
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển tiếp */
+.main-item {
+  padding: 12px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: bold; /* Sử dụng độ đậm chữ rõ ràng hơn nếu cần */
+  background-color: #ffffff;
+  color: #092f64;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles for sub-items (same as main items) */
+
+.item-link {
+  padding: 12px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: bold; /* Đảm bảo độ đậm chữ giống nhau */
+  background-color: #ffffff;
+  color: #092f64;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-item:hover, .item-link:hover {
   transform: scale(1.05);
-  background-color: #1E90FF; /* Màu nền xanh khi hover */
-  color: #ffffff !important; /* Màu chữ trắng khi hover */
+  background-color: #1E90FF;
+  color: #ffffff !important;
 }
 
 .main-item span, .item-link span {
-  color: inherit; /* Đảm bảo rằng màu chữ được thừa kế từ cha */
-}
-
-.main-item:hover span, .item-link:hover span {
-  color: #ffffff; /* Đảm bảo rằng màu chữ chuyển thành trắng khi hover */
+  color: inherit;
+  font-size: inherit; /* Đảm bảo kế thừa kích thước chữ từ cha */
+  font-weight: inherit; /* Đảm bảo kế thừa độ đậm chữ từ cha */
 }
 
 .main-item .arrow {
@@ -70,6 +81,10 @@ body {
 }
 
 .main-item.active .arrow {
-  transform: rotate(180deg); /* Xoay lên khi mở */
+  transform: rotate(180deg);
 }
 
+.main-item.active, .item-link.active {
+  background-color: #1E90FF;
+  color: #ffffff;
+}
