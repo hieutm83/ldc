@@ -7,6 +7,11 @@ body {
   display: none;
 }
 
+.active {
+  font-weight: bold;
+  color: red;
+}
+
 .logo {
   border-radius: 50%;
 }
