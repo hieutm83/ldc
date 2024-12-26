@@ -7,25 +7,37 @@
   <script src="https://cdn.tailwindcss.com"></script> <!-- Liên kết TailwindCSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> <!-- Font Awesome -->
   <style>
-
-    /* Các kiểu cơ bản cho trang */
-    body {
-      font-family: 'Arial', sans-serif; /* Sử dụng font Arial mặc định */
-      background-size: cover;
+    /* Đảm bảo html và body chiếm toàn màn hình */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: 'Arial', sans-serif;
+      background-size: cover; /* Giữ tỷ lệ hình nền */
       background-repeat: no-repeat;
       background-position: center;
+      background-attachment: fixed; /* Hình nền cố định khi cuộn */
     }
 
     /* Hình nền mặc định cho điện thoại */
     body {
-      background-image: url('https://i.imgur.com/VBRoP6M.png'); /* Thay bằng URL hình ảnh cho điện thoại */
+      background-image: url('https://i.imgur.com/VBRoP6M.png');
     }
 
-    /* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
+    /* Hình nền cho máy tính */
     @media (min-width: 768px) {
       body {
-        background-image: url('https://i.imgur.com/V7w4mwB.png'); /* Thay bằng URL hình ảnh cho máy tính */
+        background-image: url('https://i.imgur.com/V7w4mwB.png');
       }
+    }
+
+    /* Ngăn nội dung làm biến dạng hình nền */
+    .content {
+      width: 100%;
+      max-width: 768px; /* Giới hạn chiều rộng nội dung */
+      margin: 0 auto;
+      padding: 16px;
     }
 
     .hidden {
@@ -36,15 +48,10 @@
       border-radius: 50%;
     }
 
-    .bg-white {
-      background-color: #ffffff;
-    }
-
     .shadow {
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Hover effects for main items and links */
     .main-item, .item-link {
       transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
       background-color: #ffffff; /* Nền trắng mặc định */
@@ -56,14 +63,10 @@
       background-color: #1E90FF; /* Màu nền xanh khi hover */
       color: #ffffff; /* Màu chữ trắng khi hover */
     }
-
-    .main-item span, .item-link span {
-      color: inherit; /* Đảm bảo rằng màu chữ được kế thừa từ cha */
-    }
   </style>
 </head>
-<body class="bg-[#cef3fa] flex flex-col justify-center items-center min-h-screen overflow-hidden">
-  <div class="w-full max-w-md p-4">
+<body>
+  <div class="content">
     <div class="flex justify-center mb-4">
       <img alt="Company logo" class="rounded-full" height="80" src="https://i.imgur.com/U4A761w.png" width="80" />
     </div>
