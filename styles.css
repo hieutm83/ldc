@@ -1,35 +1,40 @@
 /* Base Styles */
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%; /* Đảm bảo nội dung luôn đủ cao */
   font-family: 'Arial', sans-serif;
-  background-size: cover; /* Giữ tỷ lệ của hình nền */
+  background-size: cover; /* Giữ tỷ lệ hình nền */
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  background-image: url('https://i.imgur.com/VBRoP6M.png'); /* URL hình nền cho điện thoại */
-  overflow-x: hidden; /* Tránh cuộn ngang nếu nội dung mở rộng */
-  height: 100%; /* Giữ chiều cao toàn màn hình */
+  background-attachment: fixed; /* Hình nền cố định khi cuộn */
+}
+
+/* Hình nền mặc định cho điện thoại */
+body {
+  background-image: url('https://i.imgur.com/VBRoP6M.png');
 }
 
 /* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
 @media (min-width: 768px) {
   body {
-    background-image: url('https://i.imgur.com/V7w4mwB.png'); /* URL hình nền cho máy tính */
+    background-image: url('https://i.imgur.com/V7w4mwB.png');
   }
 }
 
-/* Đảm bảo các thư mục con không làm thay đổi layout */
+/* Ẩn nội dung khi không mở */
 .hidden {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
+/* Khi mở nội dung */
 .hidden.open {
-  max-height: 500px; /* Hoặc giá trị phù hợp */
-  overflow: auto; /* Cho phép cuộn nếu nội dung vượt quá chiều cao */
+  max-height: 500px; /* Tùy chỉnh độ cao tối đa */
 }
 
-/* Các lớp CSS khác */
 .logo {
   border-radius: 50%;
 }
@@ -42,6 +47,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Thêm khoảng cách giữa các phần */
 .space-y-2 > * {
   margin-bottom: 0.5rem;
 }
@@ -50,34 +56,46 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Khoảng cách tùy chỉnh cho đoạn văn */
 .spacing-bottom {
   margin-bottom: 1rem;
 }
 
+/* Hiệu ứng hover cho các mục chính và liên kết */
 .main-item, .item-link {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  background-color: #ffffff;
-  color: #092f64;
+  background-color: #ffffff; /* Nền trắng mặc định */
+  color: #092f64; /* Chữ xanh mặc định */
 }
 
 .main-item:hover, .item-link:hover {
   transform: scale(1.05);
-  background-color: #1E90FF;
-  color: #ffffff !important;
+  background-color: #1E90FF; /* Màu nền xanh khi hover */
+  color: #ffffff; /* Màu chữ trắng khi hover */
 }
 
 .main-item span, .item-link span {
-  color: inherit;
+  color: inherit; /* Kế thừa màu chữ */
 }
 
 .main-item:hover span, .item-link:hover span {
   color: #ffffff;
 }
 
+/* Hiệu ứng cho mũi tên */
 .main-item .arrow {
   transition: transform 0.3s ease;
 }
 
 .main-item.active .arrow {
   transform: rotate(180deg);
+}
+
+/* Định dạng nội dung chính để giữ bố cục đẹp */
+.content {
+  width: 100%;
+  max-width: 768px; /* Giới hạn chiều rộng */
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box; /* Tính cả padding trong kích thước */
 }
