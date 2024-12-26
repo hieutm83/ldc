@@ -5,62 +5,42 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Tạo hình nền cố định */
-body::before {
-  content: '';
-  position: fixed; /* Cố định hình nền */
+/* Phần tử hình nền */
+.background {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Đưa hình nền ra sau nội dung */
   background-image: url('https://i.imgur.com/VBRoP6M.png'); /* Hình nền mặc định */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -1; /* Đưa hình nền ra sau */
 }
 
-/* Hình nền cho máy tính và thiết bị lớn */
+/* Hình nền cho màn hình lớn */
 @media (min-width: 768px) {
-  body::before {
-    background-image: url('https://i.imgur.com/V7w4mwB.png'); /* Hình nền cho máy tính */
+  .background {
+    background-image: url('https://i.imgur.com/V7w4mwB.png'); /* Hình nền máy tính */
   }
 }
 
-/* Nội dung chính */
+/* Nội dung */
 .content {
+  position: relative;
+  z-index: 1; /* Đảm bảo nội dung ở trên hình nền */
   width: 100%;
-  max-width: 768px; /* Giới hạn chiều rộng */
+  max-width: 768px;
   margin: 0 auto;
   padding: 16px;
   box-sizing: border-box;
 }
 
-.hidden {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.hidden.open {
-  max-height: 500px;
-}
-
-.logo {
-  border-radius: 50%;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.shadow {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Hiệu ứng hover */
+/* Hover và hiệu ứng */
 .main-item, .item-link {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   background-color: #ffffff;
@@ -81,15 +61,17 @@ body::before {
   color: #ffffff;
 }
 
-.main-item .arrow {
-  transition: transform 0.3s ease;
+.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.main-item.active .arrow {
-  transform: rotate(180deg);
+.hidden.open {
+  max-height: 500px;
 }
 
-/* Chỉnh sửa riêng cho màn hình nhỏ */
+/* Media Query cho màn hình nhỏ */
 @media (max-width: 767px) {
   .content {
     padding: 12px;
