@@ -10,7 +10,7 @@ body {
 }
 
 .hidden.open {
-  max-height: 500px; /* Hoặc giá trị lớn hơn để đảm bảo đủ chiều cao */
+  max-height: 700px; /* Hoặc giá trị lớn hơn để đảm bảo đủ chiều cao */
 }
 
 .logo {
@@ -36,7 +36,7 @@ body {
 
 /* Custom spacing for paragraphs */
 .spacing-bottom {
-  margin-bottom: 1rem; /* Khoảng cách giữa các đoạn văn */
+  margin-bottom: 1.8rem; /* Khoảng cách giữa các đoạn văn */
 }
 
 /* Hover effects for main items and links */
