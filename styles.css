@@ -9,8 +9,8 @@ body {
   transition: max-height 0.3s ease;
 }
 
-.open {
-  max-height: 700px; /* Đặt chiều cao đủ lớn để hiển thị nội dung */
+.hidden.open {
+  max-height: 500px; /* Hoặc giá trị lớn hơn để đảm bảo đủ chiều cao */
 }
 
 .logo {
@@ -25,27 +25,25 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Add the spacing between sections */
 .space-y-2 > * {
   margin-bottom: 0.5rem;
 }
 
-.space-y-3 > * {
-  margin-bottom: 0.75rem;
+.space-y-4 > * {
+  margin-bottom: 1rem;
 }
 
+/* Custom spacing for paragraphs */
 .spacing-bottom {
-  margin-bottom: 1.8rem; /* Khoảng cách giữa các đoạn văn */
+  margin-bottom: 1rem; /* Khoảng cách giữa các đoạn văn */
 }
 
+/* Hover effects for main items and links */
 .main-item, .item-link {
-  padding: 12px; /* Đồng bộ padding */
-  border-radius: 9999px; /* Đồng bộ bo tròn */
-  font-size: 16px; /* Đồng bộ kích thước chữ */
-  font-weight: bold; /* Đồng bộ độ đậm chữ */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   background-color: #ffffff; /* Nền trắng mặc định */
   color: #092f64; /* Chữ xanh mặc định */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng giống nhau */
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển tiếp */
 }
 
 .main-item:hover, .item-link:hover {
@@ -68,9 +66,4 @@ body {
 
 .main-item.active .arrow {
   transform: rotate(180deg); /* Xoay lên khi mở */
-}
-
-.main-item.active, .item-link.active {
-  background-color: #1E90FF; /* Thay đổi màu nền khi mục chính được kích hoạt */
-  color: #ffffff; /* Thay đổi màu chữ khi mục chính được kích hoạt */
 }
