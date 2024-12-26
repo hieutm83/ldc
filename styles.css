@@ -1,11 +1,18 @@
 /* Base Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-image: url('https://example.com/your-background-image.jpg'); /* Thay bằng URL hình nền của bạn */
-  background-size: auto; /* Giữ nguyên kích thước ảnh nền */
-  background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-  background-position: center; /* Căn giữa ảnh nền */
-  background-attachment: fixed; /* Giữ cố định ảnh nền khi cuộn trang */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url('https://i.imgur.com/rwumQ4w.png'); /* URL hình nền cho điện thoại */
+}
+
+/* Hình nền cho máy tính và các thiết bị có độ rộng từ 768px trở lên */
+@media (min-width: 768px) {
+  body {
+    background-image: url('https://i.imgur.com/C0rUVm7.png'); /* URL hình nền cho máy tính */
+  }
 }
 
 .hidden {
@@ -15,7 +22,7 @@ body {
 }
 
 .hidden.open {
-  max-height: 500px; /* Hoặc giá trị lớn hơn để đảm bảo đủ chiều cao */
+  max-height: 500px;
 }
 
 .logo {
@@ -30,7 +37,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Add the spacing between sections */
+/* Thêm khoảng cách giữa các phần */
 .space-y-2 > * {
   margin-bottom: 0.5rem;
 }
@@ -39,30 +46,30 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Custom spacing for paragraphs */
+/* Khoảng cách tùy chỉnh cho đoạn văn */
 .spacing-bottom {
-  margin-bottom: 1rem; /* Khoảng cách giữa các đoạn văn */
+  margin-bottom: 1rem;
 }
 
-/* Hover effects for main items and links */
+/* Hiệu ứng hover cho các mục chính và liên kết */
 .main-item, .item-link {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  background-color: #ffffff; /* Nền trắng mặc định */
-  color: #092f64; /* Chữ xanh mặc định */
+  background-color: #ffffff;
+  color: #092f64;
 }
 
 .main-item:hover, .item-link:hover {
   transform: scale(1.05);
-  background-color: #1E90FF; /* Màu nền xanh khi hover */
-  color: #ffffff !important; /* Màu chữ trắng khi hover */
+  background-color: #1E90FF;
+  color: #ffffff !important;
 }
 
 .main-item span, .item-link span {
-  color: inherit; /* Đảm bảo rằng màu chữ được thừa kế từ cha */
+  color: inherit;
 }
 
 .main-item:hover span, .item-link:hover span {
-  color: #ffffff; /* Đảm bảo rằng màu chữ chuyển thành trắng khi hover */
+  color: #ffffff;
 }
 
 .main-item .arrow {
@@ -70,5 +77,5 @@ body {
 }
 
 .main-item.active .arrow {
-  transform: rotate(180deg); /* Xoay lên khi mở */
+  transform: rotate(180deg);
 }
