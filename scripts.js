@@ -21,13 +21,13 @@ function toggleSubdirectory(subdirectoryId, itemId) {
       subdirectory.classList.add('open');
       item.classList.add('active');
       
-      // Cuộn đến item trước, sau đó cuộn đến subdirectory
+      // Đảm bảo item được đưa lên đầu màn hình
       item.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      // Sử dụng timeout nhỏ để cuộn subdirectory lên
+      // Sau đó, cũng đảm bảo subdirectory xuất hiện ngay dưới mục
       setTimeout(() => {
         subdirectory.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 200); // 200ms để đảm bảo item cuộn xong
+      }, 200); // 200ms đảm bảo item cuộn trước
     }
   }
 }
