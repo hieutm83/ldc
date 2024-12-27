@@ -20,14 +20,9 @@ function toggleSubdirectory(subdirectoryId, itemId) {
       subdirectory.classList.remove('hidden');
       subdirectory.classList.add('open');
       item.classList.add('active');
-      
-      // Đảm bảo item được đưa lên đầu màn hình
-      item.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      // Sau đó, cũng đảm bảo subdirectory xuất hiện ngay dưới mục
-      setTimeout(() => {
-        subdirectory.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 200); // 200ms đảm bảo item cuộn trước
+      // Cuộn subdirectory lên đầu màn hình
+      subdirectory.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
